@@ -1,0 +1,15 @@
+timeout: 10
+max_retries: 3
+concurrency: 5
+follow_redirects: true
+skip_ssl_verify: false
+headers: {}
+output_format: text
+log_level: info
+# Optionally enable or disable specific modules
+# enabled_modules:
+#   - HeaderSecurity
+#   - HttpSmuggling
+#   - SSLTLSSecurity
+# disabled_modules:
+#   - CookieSecurity
