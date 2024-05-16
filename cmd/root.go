@@ -17,7 +17,7 @@ var (
 var RootCmd = &cobra.Command{
 	Use:   "gohttpscanner",
 	Short: "An advanced HTTP security vulnerability scanner",
-	Long: `GoHTTPSecScanner is an advanced HTTP security vulnerability scanner that 
+	Long: `GoHTTPScanner is an advanced HTTP security vulnerability scanner that 
 detects a wide range of web application vulnerabilities including HTTP smuggling,
 XSS, SQL injection, and many other vulnerabilities.`,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
