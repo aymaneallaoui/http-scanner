@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/aymaneallaoui/go-http-scanner/cmd"
+	"github.com/aymaneallaoui/kafka-http-scanner/cmd"
 )
 
 func main() {

@@ -4,7 +4,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/aymaneallaoui/go-http-scanner/internal/model"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/model"
 )
 
 func ParseURL(rawURL string) (model.Target, error) {

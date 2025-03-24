@@ -6,7 +6,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/aymaneallaoui/go-http-scanner/internal/model"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/model"
 )
 
 func PrintResults(result model.ScanResult, w io.Writer) error {

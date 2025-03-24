@@ -35,3 +35,10 @@ func GetModules() []ScanModule {
 
 	return result
 }
+
+func ResetModuleRegistry() {
+	modulesMu.Lock()
+	defer modulesMu.Unlock()
+
+	modules = make(map[string]ScanModule)
+}

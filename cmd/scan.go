@@ -6,10 +6,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aymaneallaoui/go-http-scanner/internal/core"
-	_ "github.com/aymaneallaoui/go-http-scanner/internal/modules"
-	"github.com/aymaneallaoui/go-http-scanner/internal/output"
-	"github.com/aymaneallaoui/go-http-scanner/pkg/utils"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/core"
+	_ "github.com/aymaneallaoui/kafka-http-scanner/internal/modules"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/output"
+	"github.com/aymaneallaoui/kafka-http-scanner/pkg/utils"
 	"github.com/spf13/cobra"
 )
 

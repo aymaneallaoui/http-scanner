@@ -3,7 +3,7 @@ package modules
 import (
 	"fmt"
 
-	"github.com/aymaneallaoui/go-http-scanner/internal/model"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/model"
 )
 
 type HeaderSecurityModule struct{}

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/aymaneallaoui/go-http-scanner/internal/model"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/model"
 )
 
 const (

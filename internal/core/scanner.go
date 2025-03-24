@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	customhttp "github.com/aymaneallaoui/go-http-scanner/internal/http"
-	"github.com/aymaneallaoui/go-http-scanner/internal/model"
-	"github.com/aymaneallaoui/go-http-scanner/internal/modules"
+	customhttp "github.com/aymaneallaoui/kafka-http-scanner/internal/http"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/model"
+	"github.com/aymaneallaoui/kafka-http-scanner/internal/modules"
 	"github.com/sirupsen/logrus"
 )
 
