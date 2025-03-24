@@ -1,4 +1,6 @@
-# GoHTTPScanner
+# Kafka HTTP Scanner
+
+![terminal](docs/image/terminal.png)
 
 An advanced HTTP security vulnerability scanner that detects a wide range of web application vulnerabilities.
 

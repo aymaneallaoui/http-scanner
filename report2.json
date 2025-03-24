@@ -1,0 +1,88 @@
+{
+  "target": "https://www.hackthissite.org",
+  "timestamp": "2025-03-24T00:32:43Z",
+  "duration": "20.002003241s",
+  "vulnerabilities": [
+    {
+      "id": "HEADER-01",
+      "name": "Missing X-Frame-Options Header",
+      "description": "The X-Frame-Options header is not set, which may allow clickjacking attacks",
+      "severity": "MEDIUM",
+      "cvss": 5.8,
+      "detail": "X-Frame-Options header prevents a web page from being displayed in a frame on another domain",
+      "remediation": "Add X-Frame-Options header with value DENY or SAMEORIGIN",
+      "reference": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
+    },
+    {
+      "id": "HEADER-03",
+      "name": "Missing X-Content-Type-Options Header",
+      "description": "The X-Content-Type-Options header is not set",
+      "severity": "LOW",
+      "cvss": 3.7,
+      "detail": "X-Content-Type-Options prevents MIME type sniffing",
+      "remediation": "Add X-Content-Type-Options header with value nosniff",
+      "reference": "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options"
+    },
+    {
+      "id": "INFO-01",
+      "name": "Server Information Disclosure",
+      "description": "The server header discloses version information",
+      "severity": "LOW",
+      "cvss": 3.1,
+      "detail": "Server header contains: HackThisSite",
+      "remediation": "Configure the server to provide minimal information in the Server header",
+      "reference": "https://www.owasp.org/index.php/Fingerprint_Web_Server_(OTG-INFO-002)"
+    },
+    {
+      "id": "SQLI-02",
+      "name": "Time-Based Blind SQL Injection",
+      "description": "The application appears vulnerable to time-based blind SQL injection",
+      "severity": "CRITICAL",
+      "cvss": 8.5,
+      "detail": "The application response time increased significantly with a time-delay SQL payload",
+      "evidence": "Payload: '; WAITFOR DELAY '0:0:2'--, Response time: 1.5005967230000001 seconds",
+      "remediation": "Use parameterized queries or prepared statements",
+      "reference": "https://owasp.org/www-community/attacks/Blind_SQL_Injection"
+    },
+    {
+      "id": "HTTP-SMUGGLE-01",
+      "name": "HTTP Request Smuggling (CL.TE)",
+      "description": "The server is vulnerable to HTTP request smuggling using Content-Length and Transfer-Encoding headers",
+      "severity": "HIGH",
+      "cvss": 8.1,
+      "detail": "The server appears to process both Content-Length and Transfer-Encoding headers, which can lead to request smuggling attacks.",
+      "evidence": "Server accepted malformed request with conflicting headers",
+      "remediation": "Configure the server to reject requests with both Content-Length and Transfer-Encoding headers or ensure consistent handling.",
+      "reference": "https://portswigger.net/web-security/request-smuggling"
+    },
+    {
+      "id": "HTTP-SMUGGLE-02",
+      "name": "HTTP Request Smuggling (TE.CL)",
+      "description": "The server is vulnerable to HTTP request smuggling using Transfer-Encoding and Content-Length headers",
+      "severity": "HIGH",
+      "cvss": 8.1,
+      "detail": "The server appears to process Transfer-Encoding over Content-Length, which can lead to request smuggling attacks.",
+      "evidence": "Server accepted malformed request with conflicting headers",
+      "remediation": "Configure the server to reject requests with both Content-Length and Transfer-Encoding headers or ensure consistent handling.",
+      "reference": "https://portswigger.net/web-security/request-smuggling"
+    },
+    {
+      "id": "CLICKJACK-01",
+      "name": "Clickjacking Vulnerability",
+      "description": "The application is vulnerable to clickjacking attacks",
+      "severity": "MEDIUM",
+      "cvss": 6.5,
+      "detail": "The application does not set X-Frame-Options or CSP frame-ancestors directive",
+      "remediation": "Set X-Frame-Options header to DENY or SAMEORIGIN, or use CSP frame-ancestors directive",
+      "reference": "https://owasp.org/www-community/attacks/Clickjacking"
+    }
+  ],
+  "stats": {
+    "critical": 1,
+    "high": 2,
+    "medium": 2,
+    "low": 2,
+    "info": 0,
+    "total": 7
+  }
+}
