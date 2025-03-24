@@ -19,9 +19,3 @@ jobs:
 
       - name: Build
         run: go build -v ./...
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: http-scanner
-          path: ./http-scanner
