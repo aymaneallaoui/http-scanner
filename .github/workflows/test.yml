@@ -27,9 +27,9 @@ jobs:
         run: go test -v ./tests/integration/...
 
       - name: Generate test coverage
-        run: go test -coverprofile=coverage.out ./...
+        run: go test -coverprofile=coverage.txt ./...
 
       - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
-          file: ./coverage.out
+          token: ${{ secrets.CODECOV_TOKEN }}
